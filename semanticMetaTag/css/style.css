@@ -1,0 +1,17 @@
+*{
+    width: 0 auto;
+    height: 0 auto;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+form h1{
+    font-size: 42px;
+}
+
+input:focus:invalid{
+    border: 2px solid red;
+}
