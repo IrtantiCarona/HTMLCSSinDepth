@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pinjaman Buku</title>
+</head>
+<body>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Data Peminjam</legend>
+                <label for="nama_peminjam">Nama:</label><br>
+                <input type="text" name="nama_peminjam" id="nama_peminjam" required value="Irtanti Carona"><br>
+                <label for="telp_peminjam">No WA:</label><br>
+                <input type="tel" name="telp_peminjam" id="telp_peminjam" required value="0812********"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Data Buku</legend>
+                <label for="nama_buku">Nama Buku:</label><br>
+                <input type="text" name="nama_buku" id="nama_buku" required><br>
+                <label for="id_buku">ID Buku:</label><br>
+                <input type="text" name="id_buku" id="id_buku" required pattern="\d{10}" maxlength="10"><br>
+                <label for="genre_buku">Genre Buku</label>
+                <select name="genre_buku" id="genre_buku">
+                    <option value="matematika">Matematika</option>
+                    <option value="buku_anak">Buku Anak</option>
+                    <option value="sospol">Sosial Politik</option>
+                    <option value="pemrograman">Pemrograman</option>
+                </select><br>
+            </fieldset>
+            <fieldset>
+                <legend>Data Peminjaman</legend>
+                <label for="tgl_peminjaman">Tanggal Meminjam:</label><br>
+                <input type="date" required name="tgl_peminjaman" id="tgl_peminjaman"><br>
+                <label for="durasi_meminjam">Durasi Meminjam</label><br>
+                <input type="range" name="durasi_meminjam" id="durasi_meminjam" required min="3" max="7" value="3" oninput="this.nextElementSibling.value = this.value">
+                <output>3</output>
+            </fieldset>
+            <div>
+                <label for="policy">
+                    <input type="checkbox" required>Saya menerima segala SOP
+                </label>
+            </div>
+            <div>
+                <button type="submit">Pinjam</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

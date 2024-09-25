@@ -1,6 +1,8 @@
 *{
     width: 0 auto;
     height: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
 }
 
 main{
@@ -14,4 +16,53 @@ form h1{
 
 input:focus:invalid{
     border: 2px solid red;
+}
+
+.container{
+    display: inline-flex;
+    flex: 1 1 300px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.icon{
+    padding: 0.8rem;
+}
+
+.searchBox{
+    border: 0;
+    flex: 1;
+}
+
+.searchButton{
+    color: white;
+    background: #0f4a8a;
+    border: 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.container-nav{
+    background-color: #2b2d4e;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+}
+
+.container-nav li{
+    list-style-type: none;
+}
+
+.container-nav a{
+    display: inline-block;
+    padding: 25px;
+    margin: 0 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container-nav a:hover{
+    background-color: lightsteelblue;
 }
